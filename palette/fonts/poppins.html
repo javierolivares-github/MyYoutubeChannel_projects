@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"   rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <title>Poppins</title>
+  <style>
+    html, body{
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--clr-black-100);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {font-size: 4rem;}
+    h2 {font-size: 2rem;}
+    h3 {font-size: 1.17rem;}
+    h4 {font-size: 0.7rem; color: var(--clr-black-70);}
+    h2,h3,h4 { text-transform: uppercase;}
+
+    :root {
+      --clr-black-100: black;
+      --clr-black-70: rgba(0,0,0,0.7);
+      --clr-lightgrey: #f1f1f1;
+      --clr-white: #fff;
+      --clr-sunflower: rgba(241, 196, 15,1.0);
+      --clr-orange: rgba(243, 156, 18,1.0);
+      --clr-turquoise: rgba(26, 188, 156,1.0);
+      --clr-greensea: rgba(22, 160, 133,1.0);
+      --clr-alizarin: rgba(231, 76, 60,1.0);
+      --clr-pomegranate: rgba(192, 57, 43,1.0);
+      --clr-peterriver: rgba(52, 152, 219,1.0);
+      --clr-belizehole: rgba(41, 128, 185,1.0);
+      --clr-amethyst: rgba(155, 89, 182,1.0);
+      --clr-wisteria: rgba(142, 68, 173,1.0);
+    }
+
+    .bg-black-100 {background: var(--clr-black-100);}
+    .bg-black-70 {background: var(--clr-black-70);}
+    .bg-lightgrey {background: var(--clr-lightgrey);}
+    .bg-white {background: var(--clr-white);}
+    .bg-sunflower {background: var(--clr-sunflower);}
+    .bg-orange {background: var(--clr-orange);}
+    .bg-alizarin {background: var(--clr-alizarin);}
+    .bg-pomegranate {background: var(--clr-pomegranate);}
+    .bg-turquoise {background: var(--clr-turquoise);}
+    .bg-greensea {background: var(--clr-greensea);}
+    .bg-peterriver {background: var(--clr-peterriver);}
+    .bg-belizehole {background: var(--clr-belizehole);}
+    .bg-amethyst {background: var(--clr-amethyst);}
+    .bg-wisteria {background: var(--clr-wisteria);}
+
+    .bg-sunflower-outline {border: 1px solid var(--clr-sunflower);}
+    .bg-alizarin-outline {border: 1px solid var(--clr-alizarin);}
+    .bg-turquoise-outline {border: 1px solid var(--clr-turquoise);}
+    .bg-peterriver-outline {border: 1px solid var(--clr-peterriver);}
+    .bg-amethyst-outline {border: 1px solid var(--clr-amethyst);}
+
+    .clr-black-100 {color: var(--clr-black-100);}
+    .clr-black-70 {color: var(--clr-black-70);}
+    .clr-lightgrey {color: var(--clr-lightgrey);}
+    .clr-white {color: var(--clr-white);}
+    .clr-sunflower {color: var(--clr-sunflower);}
+    .clr-orange {color: var(--clr-orange);}
+    .clr-alizarin {color: var(--clr-alizarin);}
+    .clr-pomegranate {color: var(--clr-pomegranate);}
+    .clr-turquoise {color: var(--clr-turquoise);}
+    .clr-greensea {color: var(--clr-greensea);}
+    .clr-peterriver {color: var(--clr-peterriver);}
+    .clr-belizehole {color: var(--clr-belizehole);}
+    .clr-wisteria {color: var(--clr-wisteria);}
+    .clr-amethyst {color: var(--clr-amethyst);}
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .py-10 {padding: 10px;}
+    .py-20 {padding: 20px;}
+    .py-30 {padding: 30px;}
+
+
+    .my-10 {margin: 10px 0;}
+    .my-20 {margin: 20px 0;}
+    .my-30 {margin: 30px 0;}
+    .mt-10 {margin-top: 10px;}
+    .mt-20 {margin-top: 20px;}
+    .mt-30 {margin-top: 30px;}
+    .mb-10 {margin-bottom: 10px;}
+    .mb-20 {margin-bottom: 20px;}
+    .mb-30 {margin-bottom: 30px;}
+    .mr-10 {margin-right: 10px;}
+    .mr-20 {margin-right: 20px;}
+    .mr-30 {margin-right: 30px;}
+    .mr-50 {margin-right: 50px;}
+    .m-auto {margin: auto;}
+    
+
+    .border-b {border-bottom: 1px solid var(--clr-black-100);}
+    .border {border: 1px solid var(--clr-black-70);}
+
+    .circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+    }
+
+    .d-flex {display: flex;}
+    .f-column {flex-direction: column;}
+    .justify-content {justify-content: center;}
+    .align-items {align-items: center;}
+    .text-center {text-align: center;}
+
+    /* Buttons */
+    .btn {
+      text-decoration: none;
+      /* color: var(--clr-white); */
+      display: inline-block;
+      padding: 10px 50px;
+      border-radius: 5px;
+      /* background: var(--clr-black-70); */
+      transition: all 200ms ease-in-out;
+    }
+
+    .btn-outline {
+      text-decoration: none;
+      /* color: var(--clr-white); */
+      display: inline-block;
+      padding: 9px 49px;
+      border-radius: 5px;
+      /* background: var(--clr-black-70); */
+      transition: all 200ms ease-in;
+    }
+
+    .btn.bg-sunflower:hover {background: var(--clr-orange);}
+    .btn.bg-turquoise:hover {background: var(--clr-greensea);}
+    .btn.bg-alizarin:hover {background: var(--clr-pomegranate);}
+    .btn.bg-peterriver:hover {background: var(--clr-belizehole);}
+    .btn.bg-amethyst:hover {background: var(--clr-wisteria);}
+
+    .btn-outline.bg-sunflower-outline:hover,
+    .bg-sunflower-outline-hover {
+      border: 3px solid var(--clr-sunflower);
+      padding: 7px 47px;
+    }
+    .btn-outline.bg-turquoise-outline:hover,
+    .bg-turquoise-outline-hover {
+      border: 3px solid var(--clr-turquoise);
+      padding: 7px 47px;
+    }
+    .btn-outline.bg-alizarin-outline:hover,
+    .bg-alizarin-outline-hover {
+      border: 3px solid var(--clr-alizarin);
+      padding: 7px 47px;
+    }
+    .btn-outline.bg-peterriver-outline:hover,
+    .bg-peterriver-outline-hover {
+      border: 3px solid var(--clr-peterriver);
+      padding: 7px 47px;
+    }
+    .btn-outline.bg-amethyst-outline:hover,
+    .bg-amethyst-outline-hover {
+      border: 3px solid var(--clr-amethyst);
+      padding: 7px 47px;
+    }
+
+  </style>
+</head>
+<body class="container mb-10">
+  <h3 class="my-20 border-b">Typography</h3>
+
+  <h1>Header 1</h1>
+  <h2 class="mb-20">Header 2</h2>
+  <h3 class="my-20">Header 3</h3>
+  <h4 class="mt-20">Header 4</h4>
+  
+
+  <p class="my-20">This is the body copy. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum explicabo, numquam perspiciatis ut quis aut incidunt debitis odio cupiditate laboriosam alias qui aliquid reiciendis inventore ad consequatur velit culpa eum laudantium nisi fugit ea! Distinctio, deserunt fuga minima explicabo dolor sint. Fuga nihil maxime incidunt molestiae aspernatur. Tempore corrupti, corporis quisquam adipisci modi, quo, laudantium amet officia repudiandae et in architecto quaerat minima consequatur ipsum laboriosam odit pariatur nisi maxime natus molestiae exercitationem explicabo maiores nulla? Culpa tenetur nemo amet! Hic fugit similique natus praesentium omnis illum voluptatum harum officiis ullam, placeat et reiciendis id tempore ad quia blanditiis atque veniam ut expedita dicta explicabo voluptates qui alias eaque. Quod, corporis. Aut iure blanditiis error consectetur quo maiores, non quis?</p>
+
+  <p>Poppins; font-size: 18px; line-height: 1.3; h1: 4rem; h2: 2rem; h3: 1.17rem; </p>
+  <br>
+
+  <h3 class="my-20 border-b">Color Palette</h3>
+  <div class="d-flex mb-20">
+    <div>
+      <div class="circle bg-sunflower mb-10 mr-50"></div>
+      <h4>Sun Flower</h4>
+      <p><small>rgb(241, 196, 15)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-turquoise mb-10 mr-50"></div>
+      <h4>Turquoise</h4>
+      <p><small>rgb(26, 188, 156)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-alizarin mb-10 mr-50"></div>
+      <h4>Alizarin</h4>
+      <p><small>rgb(231, 76, 60)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-belizehole mb-10 mr-50"></div>
+      <h4>Belize Hole</h4>
+      <p><small>rgb(41, 128, 185)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-wisteria mb-10 mr-50"></div>
+      <h4>Wisteria</h4>
+      <p><small>rgb(142, 68, 173)</small></p>
+    </div>
+  </div>
+
+  <div class="d-flex mb-20">
+    <div>
+      <div class="circle bg-black-100 mb-10 mr-50"></div>
+      <h4>Black-100</h4>
+      <p><small>rgb(0, 0, 0)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-black-70 mb-10 mr-50"></div>
+      <h4>Black-70</h4>
+      <p><small>rgba(0, 0, 0, 0.7)</small></p>
+    </div>
+    <div>
+      <div class="circle bg-lightgrey mb-10 mr-50 border"></div>
+      <h4>Lightgrey</h4>
+      <p><small>#f1f1f1</small></p>
+    </div>
+    <div>
+      <div class="circle bg-white mb-10 mr-50 border"></div>
+      <h4>White</h4>
+      <p><small>rgb(255 ,255 ,255)</small></p>
+    </div>
+  </div>
+  <br>
+
+  <h3 class="my-20 border-b">Icons</h3>
+
+  <div class="d-flex mb-20">
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-sunflower d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-play fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-play</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-sunflower d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-microphone fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-microphone</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-sunflower d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-headphones fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-headphones</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-sunflower d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-graduation-cap fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-graduation-cap</small></p>
+    </div>
+  </div>
+
+  <div class="d-flex mb-20">
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-turquoise d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-play fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-play</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-turquoise d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-microphone fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-microphone</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-turquoise d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-headphones fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-headphones</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-turquoise d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-graduation-cap fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-graduation-cap</small></p>
+    </div>
+  </div>
+
+  <div class="d-flex mb-20">
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-alizarin d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-play fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-play</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-alizarin d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-microphone fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-microphone</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-alizarin d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-headphones fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-headphones</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-alizarin d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-graduation-cap fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-graduation-cap</small></p>
+    </div>
+  </div>
+
+  <div class="d-flex mb-20">
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-belizehole d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-play fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-play</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-belizehole d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-microphone fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-microphone</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-belizehole d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-headphones fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-headphones</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-belizehole d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-graduation-cap fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-graduation-cap</small></p>
+    </div>
+  </div>
+
+  <div class="d-flex mb-20">
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-wisteria d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-play fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-play</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-wisteria d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-microphone fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-microphone</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-wisteria d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-headphones fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-headphones</small></p>
+    </div>
+
+    <div class="d-flex f-column mr-20">
+      <div class="circle bg-wisteria d-flex justify-content align-items m-auto mr-50">
+        <span class="clr-white"><i class="fas fa-graduation-cap fa-2x"></i></span>
+      </div>
+      <p class="text-center mt-10"><small>fas fa-graduation-cap</small></p>
+    </div>
+  </div>
+  <br>
+
+  <h3 class="my-20 border-b">Buttons</h3>
+
+  <div class="d-flex">
+    <div class="mr-50">
+      <div class="mb-20">
+        <a href="#" class="btn bg-sunflower clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-sunflower-outline clr-sunflower">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-turquoise clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-turquoise-outline clr-turquoise">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-alizarin clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-alizarin-outline clr-alizarin">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-peterriver clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-peterriver-outline clr-peterriver">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-amethyst clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-amethyst-outline clr-amethyst">Button</a>
+      </div>
+      <h4>normal</h4>
+    </div>
+
+    <div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-orange clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-sunflower-outline-hover clr-sunflower">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-greensea clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-turquoise-outline-hover clr-turquoise">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-pomegranate clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-alizarin-outline-hover clr-alizarin">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-belizehole clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-peterriver-outline-hover clr-peterriver">Button</a>
+      </div>
+      <div class="mb-20">
+        <a href="#" class="btn bg-wisteria clr-white mr-20">Button</a>
+        <a href="#" class="btn-outline bg-amethyst-outline-hover clr-amethyst">Button</a>
+      </div>
+      <h4>hover</h4>
+    </div>
+  </div>
+
+</body>
+</html>

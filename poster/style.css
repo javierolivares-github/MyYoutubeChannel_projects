@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Sanchez&display=swap');
+
+:root {
+  --amarillo: #edce2d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.texto-1 {
+  font-family: 'Sanchez', serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.texto-2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 50px;
+  transform: rotate(-5deg);
+  color: #fff;
+  margin: 30px 0 40px 0;
+  padding: 10px 0;
+  line-height: 1.1;
+}
+
+.texto-3 {
+  font-family: 'Sanchez', serif;
+  font-size: 16px;
+}
+
+.imagen {
+  max-width: 1080px;
+  height: 1080px;
+  background: #333 url('./img-color-tipografia/imagen1.png') no-repeat center
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cubo-amarillo {
+  width: 540px;
+  height: 540px;
+  background: var(--amarillo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-grupo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}

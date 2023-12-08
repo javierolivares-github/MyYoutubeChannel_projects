@@ -1,0 +1,35 @@
+/* Colors */
+
+:root {
+  --yellowsun: #f1c40f;
+  --alizarin: #e74c3c;
+  --turquoise: #1abc9c;
+  --perterriver: #3498db;
+  --lightgrey: #f1f1f1;
+}
+
+/* Background colors */
+.bg-light {
+  background: #f1f1f1;
+}
+
+.bg-yellowsun {
+  background: #f1c40f;
+}
+
+.bg-alizarin {
+  background: #e74c3c;
+}
+
+.bg-turquoise {
+  background: #1abc9c;
+}
+
+.bg-peterriver {
+  background: #3498db;
+}
+
+/* Text colors */
+.clr-dark {
+  color: #333;
+}
